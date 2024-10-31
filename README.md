@@ -37,4 +37,4 @@ Make sure you have the following installed on your machine:
    Open your terminal (Command Prompt, PowerShell, or Terminal) and run the following command:
 
    ```bash
-   git clone https://github.com/yourusername/your-repo-name.git
+   git clone https://github.com/amathziah/myportfolio.git
