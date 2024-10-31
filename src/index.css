@@ -1,0 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import 'primereact/resources/themes/saga-blue/theme.css'; /* You can change the theme if you like */
+@import 'primereact/resources/primereact.min.css';
+@import 'primeicons/primeicons.css';
