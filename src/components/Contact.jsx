@@ -46,7 +46,7 @@ function Contact() {
             value={formData.name}
             onChange={handleChange}
             required
-            className="w-full p-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 transition duration-300 ease-in-out"
+            className="w-full h-12 p-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 transition duration-300 ease-in-out"
           />
         </div>
         
@@ -59,7 +59,7 @@ function Contact() {
             value={formData.email}
             onChange={handleChange}
             required
-            className="w-full p-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 transition duration-300 ease-in-out"
+            className="w-full h-12 p-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 transition duration-300 ease-in-out"
           />
         </div>
         
@@ -72,7 +72,7 @@ function Contact() {
             onChange={handleChange}
             required
             rows="4"
-            className="w-full p-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 transition duration-300 ease-in-out"
+            className="w-full h-32 p-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 transition duration-300 ease-in-out"
           />
         </div>
         
