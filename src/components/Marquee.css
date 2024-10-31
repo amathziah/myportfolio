@@ -1,25 +1,43 @@
 .marquee {
-    overflow: hidden;
-    white-space: nowrap;
-    position: relative;
+  overflow: hidden;
+  position: relative;
+  padding-left: 1rem; /* Add left gap */
+  padding-right: 1rem; /* Add right gap */
+}
+
+.marquee__inner {
+  display: flex;
+  animation: marquee 15s linear infinite; /* Adjust the speed of scrolling */
+}
+
+.marquee__item {
+  flex: 0 0 auto; /* Prevent items from shrinking */
+  margin-right: 1rem; /* Space between items */
+}
+
+/* Marquee Animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
   }
-  
-  .marquee__inner {
-    display: inline-flex;
-    animation: marquee 15s linear infinite; 
+  100% {
+    transform: translateX(-50%); /* Adjust this value to control the scroll distance */
   }
-  
+}
+
+/* Responsive styles */
+@media (max-width: 640px) {
   .marquee__item {
-    display: inline-block;
-    margin-right: 20px; 
+    margin-right: 0.5rem; /* Adjust space for smaller screens */
   }
-  
-  @keyframes marquee {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-50%); 
-    }
+
+  .marquee__inner {
+    animation: marquee 15s linear infinite; /* Speed up scrolling on small screens */
   }
-  
+}
+
+@media (min-width: 640px) and (max-width: 1024px) {
+  .marquee__item {
+    margin-right: 0.75rem; /* Adjust space for medium screens */
+  }
+}

@@ -1,5 +1,5 @@
 import React from 'react';
-import './Marquee.css'; // Make sure to create this CSS file for styles
+import './Marquee.css'; // Ensure this file contains the necessary CSS for marquee
 
 const techStackData = [
   { name: 'React', image: 'https://upload.wikimedia.org/wikipedia/commons/1/18/React_Native_Logo.png' },
@@ -19,11 +19,11 @@ const techStackData = [
 const TechStack = () => {
   const itemTemplate = (tech) => {
     return (
-      <div className="relative overflow-hidden rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:-translate-y-1 group h-64 w-64 mx-2 border border-gray-300">
+      <div className="relative overflow-hidden rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:-translate-y-1 group h-24 w-24 mx-2 border border-gray-300 flex-shrink-0">
         <div className="absolute inset-0 bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 opacity-50 transition-opacity duration-500 group-hover:opacity-75"></div>
         <div className="relative z-10 flex flex-col items-center justify-center h-full w-full bg-gray-800 rounded-lg border-4 border-transparent group-hover:border-blue-500 transition-all duration-500">
-          <img src={tech.image} alt={tech.name} className="mb-2" style={{ width: '80px', height: '80px' }} />
-          <h3 className="text-white text-center">{tech.name}</h3>
+          <img src={tech.image} alt={tech.name} className="mb-2" style={{ width: '40px', height: '40px' }} />
+          <h3 className="text-white text-center text-xs">{tech.name}</h3>
         </div>
         <div className="absolute inset-0 border-4 border-transparent group-hover:border-blue-500 animate-pulse transition-all duration-500"></div>
       </div>
@@ -31,21 +31,23 @@ const TechStack = () => {
   };
 
   return (
-    <section className="p-8 bg-gradient-to-r from-gray-800 via-gray-700 to-gray-600 rounded-lg shadow-lg mx-auto my-6 max-w-5xl">
+    <section className="p-8 bg-gradient-to-r from-gray-800 via-gray-700 to-gray-600 rounded-lg shadow-lg mx-auto my-6 w-full max-w-screen-xl">
       <h2 className="text-3xl font-bold text-green-400 mb-4 text-center">Tech Stack</h2>
 
-      <div className="marquee">
-        <div className="marquee__inner  mt-4">
-          {techStackData.map((tech, index) => (
-            <div className="marquee__item" key={index}>
-              {itemTemplate(tech)}
-            </div>
-          ))}
-          {techStackData.map((tech, index) => (
-            <div className="marquee__item" key={index + techStackData.length}>
-              {itemTemplate(tech)}
-            </div>
-          ))} {/* Duplicate for continuous scrolling */}
+      <div className="marquee-container"> {/* New container for padding */}
+        <div className="marquee">
+          <div className="marquee__inner mt-4">
+            {techStackData.map((tech, index) => (
+              <div className="marquee__item" key={index}>
+                {itemTemplate(tech)}
+              </div>
+            ))}
+            {techStackData.map((tech, index) => (
+              <div className="marquee__item" key={index + techStackData.length}>
+                {itemTemplate(tech)}
+              </div>
+            ))} {/* Duplicate for continuous scrolling */}
+          </div>
         </div>
       </div>
     </section>
@@ -53,6 +55,7 @@ const TechStack = () => {
 };
 
 export default TechStack;
+
 
 
 
