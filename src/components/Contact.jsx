@@ -25,18 +25,18 @@ function Contact() {
   };
 
   return (
-    <section className="bg-gradient-to-r from-gray-800 via-gray-700 to-gray-600 text-white p-8 rounded-lg shadow-xl max-w-2xl mx-auto mt-10">
+    <section className="bg-gradient-to-r from-gray-800 via-gray-700 to-gray-600 text-white p-6 rounded-lg shadow-xl max-w-sm mx-auto mt-10">
       {isSubmitted && (
         <div className="bg-green-500 text-white text-center p-2 rounded mb-4 transition duration-300">
           Thank you for your message!
         </div>
       )}
-      <h2 className="text-3xl font-bold mb-4 text-center">Contact Me</h2>
-      <p className="mb-6 text-center">
+      <h2 className="text-2xl font-bold mb-2 text-center">Contact Me</h2>
+      <p className="mb-4 text-center text-sm">
         Feel free to reach out with any questions or comments. I look forward to hearing from you!
       </p>
       
-      <form onSubmit={handleSubmit} className="space-y-6">
+      <form onSubmit={handleSubmit} className="space-y-4">
         <div>
           <label htmlFor="name" className="block mb-1 text-sm font-medium">Name:</label>
           <input
@@ -46,7 +46,7 @@ function Contact() {
             value={formData.name}
             onChange={handleChange}
             required
-            className="w-full h-12 p-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 transition duration-300 ease-in-out"
+            className="w-full h-10 p-2 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 transition duration-300 ease-in-out"
           />
         </div>
         
@@ -59,7 +59,7 @@ function Contact() {
             value={formData.email}
             onChange={handleChange}
             required
-            className="w-full h-12 p-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 transition duration-300 ease-in-out"
+            className="w-full h-10 p-2 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 transition duration-300 ease-in-out"
           />
         </div>
         
@@ -71,8 +71,8 @@ function Contact() {
             value={formData.message}
             onChange={handleChange}
             required
-            rows="4"
-            className="w-full h-32 p-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 transition duration-300 ease-in-out"
+            rows="3"
+            className="w-full h-24 p-2 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 transition duration-300 ease-in-out"
           />
         </div>
         

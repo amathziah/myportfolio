@@ -39,30 +39,48 @@ html {
     scrollbar-color: #4caf50 rgba(31, 31, 31, 0.8); /* Green thumb on dark track */
   }
  /* styles.css */
-
-@keyframes colorRotate {
+ @keyframes blinking-border {
   0% {
-    border-color: rgb(182, 225, 138); /* Start with blue */
+    border-color: #38bdf8; /* light blue */
   }
-  25% {
-    border-color: greenyellow; /* Change to teal */
+  33% {
+    border-color: #14b8a6; /* teal */
   }
-  50% {
-    border-color: rgb(224, 206, 224); /* Change to purple */
-  }
-  75% {
-    border-color: rgb(177, 177, 200); /* Back to blue */
+  66% {
+    border-color: #8b5cf6; /* purple */
   }
   100% {
-    border-color: teal; /* Loop back to teal */
+    border-color: #38bdf8; /* light blue */
   }
 }
 
 .blinking-border {
-  border-width: 4px; /* Set border width */
+  border-width: 2px;
   border-style: solid;
-  animation: colorRotate 10s infinite; /* Adjust the duration as needed */
+  animation: blinking-border 2s linear infinite;
 }
+
+.scroll-offset {
+  scroll-margin-top: 80px;
+}
+@keyframes blink {
+  0%,20%,40%,80%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+    color: #e21179;
+  }
+}
+
+.blink-animation {
+  display: inline-block;
+  animation: blink 2s  infinite;
+}
+
+
+
+
 
   
   

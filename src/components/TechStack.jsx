@@ -21,7 +21,7 @@ const TechStack = () => {
     return (
       <div className="relative overflow-hidden rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:-translate-y-1 group h-24 w-24 mx-2 border border-gray-300 flex-shrink-0">
         <div className="absolute inset-0 bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 opacity-50 transition-opacity duration-500 group-hover:opacity-75"></div>
-        <div className="relative z-10 flex flex-col items-center justify-center h-full w-full bg-gray-800 rounded-lg border-4 border-transparent group-hover:border-blue-500 transition-all duration-500">
+        <div className="relative z-10 flex flex-col items-center justify-center h-full w-full bg-gray-800 rounded-lg border-4 border-transparent group-hover:border-blue-500 transition-all duration-500 blinking-border">
           <img src={tech.image} alt={tech.name} className="mb-2" style={{ width: '40px', height: '40px' }} />
           <h3 className="text-white text-center text-xs">{tech.name}</h3>
         </div>
@@ -38,12 +38,12 @@ const TechStack = () => {
         <div className="marquee">
           <div className="marquee__inner mt-4">
             {techStackData.map((tech, index) => (
-              <div className="marquee__item" key={index}>
+              <div className="marquee__item " key={index}>
                 {itemTemplate(tech)}
               </div>
             ))}
             {techStackData.map((tech, index) => (
-              <div className="marquee__item" key={index + techStackData.length}>
+              <div className="marquee__item " key={index + techStackData.length}>
                 {itemTemplate(tech)}
               </div>
             ))} {/* Duplicate for continuous scrolling */}
